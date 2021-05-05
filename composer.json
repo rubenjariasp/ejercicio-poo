@@ -1,0 +1,19 @@
+{
+    "name": "ruben/poo",
+    "description": "practicnado programacion orientada a objetos",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ruben arias",
+            "email": "ruprosperi2@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": ["src/helpers.php"],
+        "psr-4": {
+            "Curso\\": "src/"
+        }
+    }
+}
