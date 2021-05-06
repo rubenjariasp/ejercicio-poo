@@ -1,11 +1,12 @@
 <?php
-
 namespace Curso;
+
 
 require_once "../vendor/autoload.php";
 
 $ruben = new Soldier("ruben");
 $jesus = new Archer("jesus");
+$armor = new Armors\BronzeArmor;
 
-$ruben->move("norte");
-$jesus->move("sur");
+$jesus->setArmor($armor);
+
