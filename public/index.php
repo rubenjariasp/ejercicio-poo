@@ -8,5 +8,12 @@ $ruben = new Soldier("ruben");
 $jesus = new Archer("jesus");
 $armor = new Armors\BronzeArmor;
 
-$jesus->setArmor($armor);
+$jesus->Attack($ruben);
+$ruben->Attack($jesus);
+$jesus->Attack($ruben);
+$ruben->Attack($jesus);
+$jesus->Attack($ruben);
+$ruben->Attack($jesus);
+$jesus->Attack($ruben);
+$ruben->Attack($jesus);
 

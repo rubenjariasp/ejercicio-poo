@@ -33,4 +33,34 @@ abstract class Unit
         $this->armor->getDescription($this);
     }
 
+    protected function takeDamage($damage)
+    {
+        $life = $this->life;
+
+        if(!is_null($this->amor)){
+            $damage =  $this->armor->absorbDamage($damage);
+        }
+
+        $this->life = $this->life - $damage;
+
+        $this->die();
+
+        show("{$this->name} tenia {$life} pts de vida. Recibio un daño de {$damage}, con lo que actualmente cuenta con {$this->life} pts de vida");
+    }
+
+    public function absorbDamage($damage)
+    {
+        $this->takeDamage($damage);
+    }
+
+    private function die()
+    {
+        if($this->life <= 0){
+            show("{$this->name} ha muerto");
+            die();
+        }
+    }
+
+    abstract public function Attack(Unit $opponet);
+
 }
