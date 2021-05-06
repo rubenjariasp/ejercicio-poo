@@ -37,7 +37,7 @@ abstract class Unit
     {
         $life = $this->life;
 
-        if(!is_null($this->amor)){
+        if(!empty($this->armor)){
             $damage =  $this->armor->absorbDamage($damage);
         }
 
@@ -48,7 +48,7 @@ abstract class Unit
         show("{$this->name} tenia {$life} pts de vida. Recibio un daño de {$damage}, con lo que actualmente cuenta con {$this->life} pts de vida");
     }
 
-    public function absorbDamage($damage)
+    protected function absorbDamage($damage)
     {
         $this->takeDamage($damage);
     }

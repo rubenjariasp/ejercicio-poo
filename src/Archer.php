@@ -12,4 +12,14 @@ class Archer extends Unit
 
         $opponet->absorbDamage($this->damage);
     }
+
+    protected function absorbDamage($damage)
+    {
+        if(rand(0,1)){
+            show("{$this->name} logró evadir el ataque");
+        }else{
+            return parent::absorbDamage($damage);
+        }
+    }
+
 }

@@ -10,6 +10,7 @@ $armor = new Armors\BronzeArmor;
 
 $jesus->Attack($ruben);
 $ruben->Attack($jesus);
+$ruben->setArmor($armor);
 $jesus->Attack($ruben);
 $ruben->Attack($jesus);
 $jesus->Attack($ruben);
